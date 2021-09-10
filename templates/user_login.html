@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+   <style>
+       *{
+           margin:0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: sans-serif;
+       }
+       body{
+       background-color: rgb(1, 4, 39);
+       
+       padding:0 10px;
+      
+       }
+       h1{
+        
+        border-radius:70px;
+        background-size: contain;
+        padding: 10%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9b6KfMwQKnCUXDAK9Be_sN9etnjzXVyQ5w&usqp=CAU");
+       }
+       h2{
+           text-align: center;
+           padding: 10px;
+           color: rgb(1, 6, 77);
+       }
+
+       .wrapper{
+      max-width: 500px;
+      width: 100%;
+      background: rgb(228, 226, 247);
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 5px  rgba(1,1,1, 125);
+
+       }
+       .wrapper:hover{
+       
+        transform: translate(1%,1%,1%,1%);
+        box-shadow: 1px 1px 8px  rgba(1,1,1, 125);
+        background-color: rgb(236, 236, 250);
+
+       }
+       
+       .wrapper.form{
+           width: 100%;
+       }
+       .wrapper.form.inputfield{
+           margin-bottom: 15px;
+           display: flex;
+           align-items: center;
+       }
+     label{
+           width: 200px;
+           color: black;
+           margin-right: 10px;
+           font-size: 14px;
+       }
+       input{
+           width: 100%;
+           outline: none;
+           border: 1px solid ;
+           font-size: 15px;
+           padding: 8px 10px;
+           border-radius: 10px;
+           transition: all 0.3;
+       }
+       select{
+           -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+           outline: none;
+           border: 1px solid ;
+           font-size: 15px;
+           padding: 8px 10px;
+           border-radius: 10px;
+           transition: all 0.3 ease;
+
+       }
+       select::before{
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+border: 8px solid;
+border-color:rgb(19, 31, 139) transparent transparent transparent;
+
+       }
+       .p{
+          background-color:rgb(29, 9, 104);
+          align-items: 50%;
+          margin-left: 30%;
+          width: 40%;
+          font-size: large;
+          color: blanchedalmond;
+          border-color:white;
+          height: 50px;
+          border-radius: 5px;
+          margin-top: 10px;
+       
+       }
+      .p:hover{
+        transform: translate(1%,1%,1%,1%);
+        box-shadow: 1px 1px 8px  rgba(1,1,1, 125);
+
+      }
+
+   </style>
+   <script>
+  
+
+   </script>
+   <div class="wrapper">
+       <div class="form">
+    <form method="POST" class="wrapper.form" enctype="multipart/form-data" action="user_profile.html">
+        <h1 class="wrapper.title"> </h1>
+        <h2>Log in</h2>
+        <p>
+        <label for="id_first_name">Email</label>
+        <input type="text" name="first_name" value="" maxlength="30" required="" id="id_first_name">
+    </p>
+    <p>
+        <label for="id_first_name">Password</label>
+        <input type="text" name="first_name" value="" maxlength="10" required="" id="id_first_name">
+    </p>
+ {{form.as_p}}
+ {% csrf_token %}
+ <input  type="submit" value="Login"  class="p" action="user_profile.html">
+    </form>
+
+</div>
+</div>
+</body>
+</html>
+
+
